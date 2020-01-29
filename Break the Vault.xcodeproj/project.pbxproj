@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F41635AB23DCCFB600DFCE6B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F41635AA23DCCFB600DFCE6B /* main.cpp */; };
+		F41635B323DCD78300DFCE6B /* processInput.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F41635B123DCD78300DFCE6B /* processInput.cpp */; };
+		F41635B623DCD7C900DFCE6B /* numberGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F41635B423DCD7C900DFCE6B /* numberGenerator.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,10 @@
 /* Begin PBXFileReference section */
 		F41635A723DCCFB600DFCE6B /* Break the Vault */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Break the Vault"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F41635AA23DCCFB600DFCE6B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		F41635B123DCD78300DFCE6B /* processInput.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = processInput.cpp; sourceTree = "<group>"; };
+		F41635B223DCD78300DFCE6B /* processInput.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = processInput.hpp; sourceTree = "<group>"; };
+		F41635B423DCD7C900DFCE6B /* numberGenerator.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = numberGenerator.cpp; sourceTree = "<group>"; };
+		F41635B523DCD7C900DFCE6B /* numberGenerator.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = numberGenerator.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,10 @@
 			isa = PBXGroup;
 			children = (
 				F41635AA23DCCFB600DFCE6B /* main.cpp */,
+				F41635B423DCD7C900DFCE6B /* numberGenerator.cpp */,
+				F41635B523DCD7C900DFCE6B /* numberGenerator.hpp */,
+				F41635B123DCD78300DFCE6B /* processInput.cpp */,
+				F41635B223DCD78300DFCE6B /* processInput.hpp */,
 			);
 			path = "Break the Vault";
 			sourceTree = "<group>";
@@ -119,6 +129,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F41635B623DCD7C900DFCE6B /* numberGenerator.cpp in Sources */,
+				F41635B323DCD78300DFCE6B /* processInput.cpp in Sources */,
 				F41635AB23DCCFB600DFCE6B /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -238,20 +250,46 @@
 		F41635AF23DCCFB600DFCE6B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RN64FBN338;
 				ENABLE_HARDENED_RUNTIME = YES;
+				OTHER_CFLAGS = "";
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-std=c++17",
+					"-pedantic-errors",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				WARNING_CFLAGS = (
+					"-Weffc++",
+					"-Wextra",
+					"-Wsign-conversion",
+					"-Wall",
+				);
 			};
 			name = Debug;
 		};
 		F41635B023DCCFB600DFCE6B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RN64FBN338;
 				ENABLE_HARDENED_RUNTIME = YES;
+				OTHER_CFLAGS = "";
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-std=c++17",
+					"-pedantic-errors",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				WARNING_CFLAGS = (
+					"-Weffc++",
+					"-Wextra",
+					"-Wsign-conversion",
+					"-Wall",
+				);
 			};
 			name = Release;
 		};
